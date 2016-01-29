@@ -35,15 +35,16 @@ agent_match_form = FALSE
 
 # Iterate through XML tags in the file
 # For each tag, get the first word, directly after the open bracket
-switch {
-  case participant
-    do this stuff
-  case another thing
-    do other stuff
-  case yet another thing
-    do another bunch of stuff
-  case gesture
-    grab the rest of the data into relevant variables
-    spit out all the variables, in order, into the csv file separated by commas, and then add a line break.
+if(tag_label == "participant")
+  do this stuff
+elif(tag_label == "personality")
+  do this stuff
+elif(tag_label == "story")
+  do this stuff
+elif(tag_label == "part")
+  do this stuff
+elif(tag_label == "gesture")
+  grab the rest of the data into relevant variables
+  spit out all the variables, in order, into the csv file separated by commas, and then add a line break.
 }
 Iterate until no more xml tags exist in the file.
