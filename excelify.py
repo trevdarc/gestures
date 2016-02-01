@@ -4,33 +4,33 @@
 
 # Create all global variables to handle all the columns in excel
 # Participant
-pid = 0
+id = 0
 # Personality
-ex = 0
-op = 0
-ag = 0
-ems = 0
-co = 0
+p_ex = 0
+p_op = 0
+p_ag = 0
+p_ems = 0
+p_co = 0
 # Story
 s_id = 0
-order = 0
-version = 0
+s_order = 0
+s_version = 0
 # Part
 number = 0
 agentexlvl = 0
 # Gesture
 g_type = "none"
-handedness = "NONE"
-stroke = 0
-se_onset_height = 0
-se_onset_width = 0
-se_onset_radial = 0
-se_offset_height = 0
-se_offset_width = 0
-se_offset_radial = 0
-retract = 0
-agent_match_loc = FALSE
-agent_match_form = FALSE
+g_handedness = "NONE"
+g_stroke = 0
+g_se_onset_height = 0
+g_se_onset_width = 0
+g_se_onset_radial = 0
+g_se_offset_height = 0
+g_se_offset_width = 0
+g_se_offset_radial = 0
+g_retract = 0
+g_agent_match_loc = FALSE
+g_agent_match_form = FALSE
 
 
 # Iterate through XML tags in the file
