@@ -32,9 +32,20 @@ g_retract = 0
 g_agent_match_loc = FALSE
 g_agent_match_form = FALSE
 
+#open the input file for reading
+input_file = open("foo.txt", "wb")
 
-# Iterate through XML tags in the file
-# For each tag, get the first word, directly after the open bracket
+#get the first line from the input file and put it in a string variable
+xml_line = input_file.readline()
+
+#split the line into array items by looking for open brackets
+tag_array = xml_line.split("<")
+
+#define the tag_label for the array items as the first word of the array item
+tag_array[0].partition(" ")[0]
+
+# Iterate through XML tags in the line
+# For each array item, get the first word, directly after the open bracket
 if(tag_label == "participant")
   do this stuff
 elif(tag_label == "personality")
