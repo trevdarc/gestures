@@ -32,6 +32,8 @@ g_retract = 0
 g_agent_match_loc = FALSE
 g_agent_match_form = FALSE
 
+
+datalist = []
 # open the input file for reading
 input_file = open("foo.txt", "wb")
 
@@ -47,15 +49,46 @@ tag_label = tag_array[0].partition(" ")[0]
 # Iterate through XML tags in the line
 # For each array item, get the first word, directly after the open bracket
 if(tag_label == "participant")
-  do this stuff
+  # do stuff
+  id = 
 elif(tag_label == "personality")
-  do this stuff
+  # do stuff  
+  p_ex = 
+  p_op = 
+  p_ag = 
+  p_ems = 
+  p_co = 
+  
 elif(tag_label == "story")
-  do this stuff
+  # do this stuff
+  s_id = 
+  s_order = 
+  s_version = 
+  
 elif(tag_label == "part")
-  do this stuff
+  # do this stuff
+  number = 
+  agentexlvl = 
+  
 elif(tag_label == "gesture")
-  grab the rest of the data into relevant variables
-  spit out all the variables, in order, into the csv file separated by commas, and then add a line break.
+  # grab the rest of the data into relevant variables
+  g_type =
+  g_handedness = 
+  g_stroke = 
+  g_se_onset_height = 
+  g_se_onset_width = 
+  g_se_onset_radial = 
+  g_se_offset_height = 
+  g_se_offset_width = 
+  g_se_offset_radial = 
+  g_retract = 
+  g_agent_match_loc = FALSE
+  g_agent_match_form = FALSE
+  
+  data_slice = (id, p_ex, p_op, p_ag, p_ems, p_co, s_id, s_order, s_version, number, agentexlvl, g_type, g_handedness, g_stroke, g_se_onset_height, g_se_onset_width, g_se_onset_radial, g_se_offset_height, g_se_offset_width, g_se_offset_radial, g_retract, g_agent_match_loc, g_agent_match_form)
+  datalist.append(list_slice)
 }
+
+#write out csv file to desktop or wherever
+
 Iterate until no more xml tags exist in the file.
